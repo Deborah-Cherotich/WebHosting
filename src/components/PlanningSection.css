@@ -1,0 +1,123 @@
+.planning-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.tabs-header {
+  margin-bottom: 20px;
+}
+
+.tabs-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-direction: row; /* Changed to row */
+  align-items: center; /* Vertically center the items */
+  position: relative; /* For positioning the line */
+}
+
+.tab-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px; /* Adjust length of the line */
+  height: 2px;
+  background-color: #21B723; /* Line color */
+  margin-bottom: 10px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent; /* Make button background transparent */
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1; /* Ensure text is above the line */
+    color: #333; /* Default color */
+    margin: 0 10px; /* Space between buttons */
+}
+
+
+.tab-button.active-tab {
+    color: #21B723; /* Active tab color */
+}
+
+.tab-button.inactive-tab {
+    color: #999; /* Inactive tab color */
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px; /* Increase gap between cards */
+}
+
+.plan-card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.plan-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.plan-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.plan-features {
+  margin-bottom: auto; /* Push features up */
+}
+
+.plan-features p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.get-started {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #21B723;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  margin-top: auto; /* Keep button at bottom */
+}
+
+@media (max-width: 768px) {
+  .plans-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+}

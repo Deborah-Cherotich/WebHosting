@@ -1,0 +1,77 @@
+.landing-page {
+    display: flex;
+    justify-content: space-between; /* Space between the text and image */
+    align-items: center; /* Align text and image vertically in the center */
+    padding: 40px 20px; /* Adjusted padding to bring up the content */
+    background-color: #043F39; /* Set background color */
+    color: white; /* Set text color to white for contrast */
+    height: 100vh; /* Ensure it takes up full height of the screen */
+  }
+  
+  .text-section {
+    max-width: 50%; /* Text section takes up half of the width */
+  }
+  
+  .text-section h1 {
+    font-size: 48px; /* Increased font size */
+    line-height: 1.2;
+    margin-bottom: 10px;
+    word-wrap: break-word; /* Break words to avoid overflow */
+  }
+  
+  .text-section p {
+    font-size: 22px; /* Increased font size */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    word-wrap: break-word; /* Break words to avoid overflow */
+  }
+  
+  .offer-box {
+    
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+  
+  .offer-box p {
+    font-size: 24px; /* Larger text for the offer */
+    margin: 5px 0;
+  }
+  
+  .get-started-btn {
+    background-color: #fdb913; /* Yellow button background */
+    padding: 12px 24px; /* Larger padding */
+    border: none; /* Remove any border */
+    font-size: 18px; /* Increased font size */
+    cursor: pointer;
+    color: white; /* Text color in button */
+    border-radius: 5px; /* Rounded corners */
+    outline: none; /* Remove any outline */
+  }
+  
+  .get-started-btn:hover {
+    background-color: #f9a800; /* Hover effect */
+  }
+  
+  .guarantee {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .history-icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .image-section {
+    max-width: 45%; /* Image section takes up slightly less space */
+  }
+  
+  .image-section img {
+    width: 100%; /* Image takes full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+  }
+  
