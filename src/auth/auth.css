@@ -1,60 +1,195 @@
-.auth-container {
-    display: flex;
-    height: 100vh;
-    width: 100%;
-  }
-  
-  .auth-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f7f7f7;
-  }
-  
-  .auth-image img {
-    width: 80%;
-    max-width: 500px;
-  }
-  
-  .auth-form {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 2rem;
-  }
-  
-  .auth-form h2 {
-    margin-bottom: 1rem;
-  }
-  
-  .auth-form form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  .auth-form input {
-    margin-bottom: 1rem;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .auth-form button {
-    padding: 0.8rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .auth-form p {
-    margin-top: 1rem;
-  }
-  
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 70vh;
+  background-color: white !important;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+}
+
+.login-form {
+  width: 500px;
+  height: 430px;
+  position: absolute;
+  margin-top: 70px; /* Ensures it stays at the top */
+  margin-left: 150px; /* 50px from the left */
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: black;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 480px;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.forgot-password {
+  color: blue;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  width: 480px;
+  height: 50px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: darkblue;
+}
+
+.signup-text {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.p-text {
+  text-align: center;
+  margin-top: 1px;
+  font-size: 16px;
+}
+
+.signup-text a {
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+.side-image {
+  position: absolute;
+  right: 100px;
+  margin-top: 40px; /* Keeps it aligned with the form */
+  width: 500px;
+  height: auto;
+}
+/* signup */
+
+.signup-form {
+  width: 500px;
+  height: 550px;
+  position: absolute;
+  top: 10px; /* Ensures it stays at the top */
+  right: 100px; /* 50px from the left */
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  color: black;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 480px;
+  height: 35px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.signup-button {
+  width: 500px;
+  height: 50px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-button:hover {
+  background-color: darkblue;
+}
+
+.signin-text {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.p-text {
+  text-align: center;
+  margin-top: 1px;
+  font-size: 16px;
+}
+
+.signin-text a {
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signin-text a:hover {
+  text-decoration: underline;
+}
+
+.side-image1 {
+  position: absolute;
+  left: 150px;
+  margin-top: 40px; /* Keeps it aligned with the form */
+  width: 500px;
+  height: auto;
+}

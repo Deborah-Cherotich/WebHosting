@@ -2,6 +2,52 @@ import React, { useState } from "react";
 import "./PlanningSection.css";
 
 const plansData = {
+    basic: [
+        {
+            title: "Basic Plan",
+            price: "Ksh 2,000 /Year Excl. VAT",
+            description: "Suitable for small websites & blogs.",
+            features: [
+                "20GB NVMe SSD Disk",
+                "2GB RAM Litespeed Server",
+                "Free SSL Certificate",
+            ],
+        },
+        {
+            title: "Standard Plan",
+            price: "Ksh 4,500 /Year Excl. VAT",
+            description: "Perfect for growing businesses.",
+            features: [
+                "100GB NVMe SSD Disk",
+                "8GB RAM Litespeed Server",
+                "Free .co.ke/.com/.org domain",
+                "Free SSL Certificate",
+            ],
+        },
+        {
+            title: "Advanced Plan",
+            price: "Ksh 8,000 /Year Excl. VAT",
+            description: "Great for high-traffic sites.",
+            features: [
+                "200GB NVMe SSD Disk",
+                "12GB RAM Litespeed Server",
+                "Free .co.ke/.com/.org domain",
+                "Free SSL Certificate",
+            ],
+        },
+        {
+            title: "Premium Plan",
+            price: "Ksh 15,000 /Year Excl. VAT",
+            description: "Ideal for enterprise-level projects.",
+            features: [
+                "Unlimited NVMe SSD Disk",
+                "32GB RAM Litespeed Server",
+                "Free .co.ke/.com/.org domain",
+                "Free SSL Certificate",
+                "Priority Support",
+            ],
+        },
+    ],
     standard: [
         {
             title: "Basic Plan",
@@ -97,7 +143,7 @@ const plansData = {
 };
 
 const PlanningSection = () => {
-    const [activeTab, setActiveTab] = useState("standard");
+    const [activeTab, setActiveTab] = useState("basic");
 
     return (
         <div className="planning-container">
@@ -106,6 +152,14 @@ const PlanningSection = () => {
                 <h2>Choose Your Plan</h2>
             </div>
             <div className="tabs">
+                <div className="tab-line"></div>
+                <button
+                    className={`tab-button ${activeTab === "basic" ? "active-tab" : "inactive-tab"}`}
+                    onClick={() => setActiveTab("basic")}
+                >
+                    Basic
+                </button>
+
                 <div className="tab-line"></div>
                 <button
                     className={`tab-button ${activeTab === "standard" ? "active-tab" : "inactive-tab"}`}
@@ -118,6 +172,12 @@ const PlanningSection = () => {
                     onClick={() => setActiveTab("advanced")}
                 >
                     Advanced
+                </button>
+                <button
+                    className={`tab-button ${activeTab === "premium" ? "active-tab" : "inactive-tab"}`}
+                    onClick={() => setActiveTab("advanced")}
+                >
+                    Premium
                 </button>
             </div>
 

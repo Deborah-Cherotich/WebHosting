@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./auth.css"; // Import CSS
+import backImage from "../assets/backimage.png";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(""); // Error state
-  const [loading, setLoading] = useState(false); // Loading state
+  const [error, setError] = useState(""); 
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const validateEmail = (email) => {
@@ -15,89 +17,70 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    setError(""); // Reset error message
-    setLoading(true); // Start loading
+    setError("");
+    setLoading(true);
 
-    // Validate email format
     if (!validateEmail(email)) {
       setError("Please enter a valid email address.");
       setLoading(false);
       return;
     }
 
-    // Mock login logic (you can replace with real authentication logic)
     if (email === "test@example.com" && password === "password") {
-      navigate("/"); // Redirect to home if login is successful
+      navigate("/");
     } else {
-      setError("Invalid email or password."); // Set error if login fails
+      setError("Invalid email or password.");
     }
 
-    setLoading(false); // Stop loading after logic
+    setLoading(false);
   };
 
   return (
-    <div className="login-container">
-      <h2>Login</h2>
-      {error && <p className="error">{error}</p>} {/* Show error if any */}
-      <form onSubmit={handleLogin}>
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit" disabled={loading}>
-          {loading ? "Logging in..." : "Login"} {/* Show loading text */}
-        </button>
-      </form>
+    <div className="container">
+      <div className="login-form">
+        <h2>SIGN IN</h2>
+        <p className="p-text">
+            Please Login to continue so as to enjoy our services
+          </p>
+        {error && <p className="error">{error}</p>}
+        <form onSubmit={handleLogin}>
+          <div className="input-group">
+            <label>Email:</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="input-group">
+            <label>Password:</label>
+            <input
+              type="password"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <div className="options">
+            <label>
+              <input type="checkbox" /> Remember me
+            </label>
+            <a href="#" className="forgot-password">Forgot Password?</a>
+          </div>
+          <button type="submit" className="login-button" disabled={loading}>
+            {loading ? "Logging in..." : "Login"}
+          </button>
+          <p className="signup-text">
+            Don't have an account? <a href="/signup">Sign Up</a>
+          </p>
+        </form>
+      </div>
+      <img src={backImage} alt="Side Image" className="side-image" />
     </div>
   );
 };
 
 export default Login;
-
-
-// import React from "react";
-// import { Link } from "react-router-dom";
-// import "./auth.css";
-// import loginImage from "../assets/login.png";
-
-// const Login = () => {
-//   return (
-//     <div className="auth-container">
-//       {/* Left Side - Image */}
-//       <div className="auth-image">
-//         <img src={loginImage} alt="Login" />
-//       </div>
-
-//       {/* Right Side - Form */}
-//       <div className="auth-form">
-//         <h2>Login</h2>
-//         <form>
-//           <input type="email" placeholder="Email" required />
-//           <input type="password" placeholder="Password" required />
-//           <button type="submit">Login</button>
-//         </form>
-//         <p>
-//           Don't have an account? <Link to="/signup">Sign Up</Link>
-//         </p>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Login;
-
-

@@ -1,11 +1,14 @@
 .landing-page {
-    display: flex;
-    justify-content: space-between; /* Space between the text and image */
-    align-items: center; /* Align text and image vertically in the center */
-    padding: 40px 20px; /* Adjusted padding to bring up the content */
-    background-color: #043F39; /* Set background color */
-    color: white; /* Set text color to white for contrast */
-    height: 100vh; /* Ensure it takes up full height of the screen */
+  display: flex;
+  justify-content: space-between; /* Space between the text and image */
+  align-items: center; /* Align text and image vertically in the center */
+ 
+  background-image: url("../assets/hero-bg.png"); /* Replace with your image path */
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating */
+  color: white; /* Set text color to white for contrast */
+  height: 100vh; /* Ensure it takes up full height of the screen */
   }
   
   .text-section {
@@ -17,12 +20,14 @@
     line-height: 1.2;
     margin-bottom: 10px;
     word-wrap: break-word; /* Break words to avoid overflow */
+    color: black;
   }
   
   .text-section p {
     font-size: 22px; /* Increased font size */
     line-height: 1.6;
     margin-bottom: 20px;
+    color: black;
     word-wrap: break-word; /* Break words to avoid overflow */
   }
   
@@ -74,4 +79,48 @@
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
   }
+  .green-box {
+    position: absolute;
+    width: 1230px;
+    height: 80px;
+    background-color: green;
+    top: 90px;
+    left: 100px;
+    right: 100px;
+  }
+  .domain-input {
+    position: absolute;
+    width: 600px;
+    height: 36px;
+    top: 23px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    margin-left: 301px;
+
+  }
+  .check-domain-btn {
+    position: absolute;
+    height: 40px;
+    width: 300px;
+    top: 23px;
+    font-size: 16px;
+    background-color: orange;
+    color: white;
+    border: none;
+    
+    cursor: pointer;
+    margin-left: 73%;
+  }
+
+  .green-box1 {
+    position: absolute;
+    width: 1280px;
+    height: 30px;
+    background-color: transparent;
+    top: 175px;
+    left: 100px;
+    right: 100px;
+  }
+  
+ 
   
